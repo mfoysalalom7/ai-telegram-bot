@@ -317,26 +317,9 @@ async def health():
 
 @app.get("/webhook-status")
 async def webhook_status():
-
-    try:
-        info = await telegram_app.bot.get_webhook_info()
-
-        return {
-            "ok": True,
-            "url": info.url,
-            "pending_update_count": info.pending_update_count,
-            "last_error_message": info.last_error_message,
-            "last_error_date": info.last_error_date,
-            "has_custom_certificate": info.has_custom_certificate,
-            "max_connections": info.max_connections,
-        }
-
-    except Exception as e:
-
-        return {
-            "ok": False,
-            "error": str(e),
-        }
+    return {
+        "status": "webhook-status-route-working"
+    }
 # =========================================================
 # TELEGRAM WEBHOOK
 # =========================================================
