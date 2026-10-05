@@ -12,7 +12,7 @@ from telegram.ext import (
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
-client = OpenAI(api_key=AQ.Ab8RN6K3EKWH3mV0OzlmFUNW_aSqKqe9JAmwdUizrDlbr1wjuw)
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 MODEL = "gpt-5"
 
